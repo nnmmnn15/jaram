@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'mbti.css' %}">
+   <title>자람학기제</title>
+</head>
+<body>
+   <section id="test_page">    
+      <div class="test_wrapper">
+         <div class="start">
+            <div class="mainImg">
+               <img src="{% static 'img/main.png' %}" alt="">
+            </div>
+            <h4>내 축제 성향은 뭘까?
+               <br><br>축제 성향테스트!
+            </h4>
+
+            <button type="button" onclick='start()'>테스트 시작</button>
+         </div>
+         <div class="question">
+            <h4 class="question_detail" id="title">1번 문제</h4>
+            <input id="type" type="hidden" value="EI">
+         <div class="btn_wrapper">
+            <button id="A" type="button">대답 E</button>
+            <button id="B" type="button">대답 I</button>
+         </div>
+         <div class = "p_bar"> <!--부트스트랩 프로그레스 바-->
+            <div class="progress">
+               <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+               </div>
+            </div>
+            <p class="progress-txt">1/12</p> 
+         </div>
+      </div>
+      <input type="hidden" id="EI" value="0">
+      <input type="hidden" id="SN" value="0">
+      <input type="hidden" id="EH" value="0">
+   </section>
+
+<script src="{% static 'mbti.js' %}"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+</body>
+</html>
